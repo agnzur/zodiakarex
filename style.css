@@ -1,0 +1,41 @@
+body {
+  margin: 0;
+}
+
+.date-time-widget {
+  text-align: right;
+  padding: 10px 10px 0;
+  font-size: 18px;
+}
+
+.web-name-area {
+  padding: 15px 0;
+  text-align: center;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+#heading {
+  border-top: 2px solid black;
+  font-size: 60px;
+}
+
+#subheading {
+  font-size: 40px;
+  border-bottom: 2px solid black;
+}
+
+#horoscope-area-container {
+  padding: 100px 10px 200px;
+}
+
+#name-field,
+#birth-date-widget,
+#button-conatiner {
+  padding: 5px 10px;
+}
+
+footer {
+  height: 120px;
+  background-color: grey;
+}
