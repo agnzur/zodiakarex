@@ -5,7 +5,7 @@ async function getBirthDayAndMonth() {
   const calendar = document.getElementById("birth-date-widget");
   const chosenDate = calendar.value;
   const dateFormat = chosenDate.slice(5).replace("-", ".");
-  console.log("1");
+
   // const zodiacSigns = await assignZodiacSignToDate(dateFormat);
   // console.log(zodiacSigns);
 
