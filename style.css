@@ -30,7 +30,7 @@ body {
 }
 
 #name-field,
-#birth-date-widget,
+#birth-date-container,
 #button-conatiner {
   padding: 5px 10px;
 }

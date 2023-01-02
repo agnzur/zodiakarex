@@ -1,4 +1,4 @@
-async function getHoroscope(sign) {
+async function getApi(sign) {
   const response = await fetch(
     `https://aztro.sameerkumar.website/?sign=${sign}&day=today`,
     {
