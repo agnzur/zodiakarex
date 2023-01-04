@@ -6,9 +6,7 @@ class zodiacSign {
   }
   isZodiacSign(day, month) {
     const date = new Date(`2000-${month}-${day}`);
-    if (date >= this.startDate && date <= this.endDate) {
-      return true;
-    }
+    return date >= this.startDate && date <= this.endDate;
   }
 }
 
