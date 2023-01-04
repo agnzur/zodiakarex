@@ -1,4 +1,4 @@
-class zodiacSign {
+class genericZodiacSign {
   constructor(signName, startMonth, startDay, endMonth, endDay) {
     this.signName = signName;
     this.startDate = new Date(`2000-${startMonth}-${startDay}`);
@@ -10,20 +10,40 @@ class zodiacSign {
   }
 }
 
-const Aquarius = new zodiacSign("Aquarius", 01, 20, 02, 18);
-const Pisces = new zodiacSign("Pisces", 02, 19, 03, 20);
-const Aries = new zodiacSign("Aries", 03, 21, 04, 19);
-const Taurus = new zodiacSign("Taurus", 04, 20, 05, 20);
-const Gemini = new zodiacSign("Gemini", 05, 21, 06, 21);
-const Cancer = new zodiacSign("Cancer", 06, 22, 07, 22);
-const Leo = new zodiacSign("Leo", 07, 23, 08, 22);
-const Virgo = new zodiacSign("Virgo", 08, 23, 09, 22);
-const Libra = new zodiacSign("Libra", 09, 23, 10, 23);
-const Scorpius = new zodiacSign("Scorpius", 10, 24, 11, 21);
-const Sagittarius = new zodiacSign("Sagittarius", 11, 22, 12, 21);
-const Capricornus = new zodiacSign("Capricornus", 12, 22, 01, 19);
+class capricornusSign extends genericZodiacSign {
+  constructor(signName, startMonth, startDay, endMonth, endDay) {
+    super(signName, startMonth, startDay, endMonth, endDay);
+  }
+  isZodiacSign(day, month) {
+    let date = new Date(`2000-${month}-${day}`);
+    //December
+    if (month === 12 && day >= 22) {
+      return date >= this.startDate && date >= this.endDate;
+    }
+    //January
+    else if (month === 1 && day <= 19) {
+      return date <= this.startDate && date <= this.endDate;
+    }
+  }
+}
+
+const Aquarius = new genericZodiacSign("Aquarius", 01, 20, 02, 18);
+const Pisces = new genericZodiacSign("Pisces", 02, 19, 03, 20);
+const Aries = new genericZodiacSign("Aries", 03, 21, 04, 19);
+const Taurus = new genericZodiacSign("Taurus", 04, 20, 05, 20);
+const Gemini = new genericZodiacSign("Gemini", 05, 21, 06, 21);
+const Cancer = new genericZodiacSign("Cancer", 06, 22, 07, 22);
+const Leo = new genericZodiacSign("Leo", 07, 23, 08, 22);
+const Virgo = new genericZodiacSign("Virgo", 08, 23, 09, 22);
+const Libra = new genericZodiacSign("Libra", 09, 23, 10, 23);
+const Scorpius = new genericZodiacSign("Scorpius", 10, 24, 11, 21);
+const Sagittarius = new genericZodiacSign("Sagittarius", 11, 22, 12, 21);
+const Capricornus = new capricornusSign("Capricornus", 12, 22, 01, 19);
 
 function getZodiacSignName(day, month) {
+  // console.log(Capricornus.isZodiacSign(day, month));
+  // console.log(day);
+  // console.log(month);
   if (Aquarius.isZodiacSign(day, month)) {
     return Aquarius.signName;
   } else if (Pisces.isZodiacSign(day, month)) {
@@ -52,4 +72,3 @@ function getZodiacSignName(day, month) {
     throw new Error("error");
   }
 }
-console.log(getZodiacSignName(28, 10));
