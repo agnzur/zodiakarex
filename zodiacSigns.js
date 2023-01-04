@@ -41,9 +41,6 @@ const Sagittarius = new genericZodiacSign("Sagittarius", 11, 22, 12, 21);
 const Capricornus = new capricornusSign("Capricornus", 12, 22, 01, 19);
 
 function getZodiacSignName(day, month) {
-  // console.log(Capricornus.isZodiacSign(day, month));
-  // console.log(day);
-  // console.log(month);
   if (Aquarius.isZodiacSign(day, month)) {
     return Aquarius.signName;
   } else if (Pisces.isZodiacSign(day, month)) {

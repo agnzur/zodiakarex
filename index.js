@@ -1,15 +1,15 @@
 const nameField = document.getElementById("name-field");
 const showButton = document.getElementById("show-button");
+const calendar = document.getElementById("birth-date-widget");
 
-async function getBirthDayAndMonth() {
-  const calendar = document.getElementById("birth-date-widget");
-  const chosenDate = calendar.value;
-  const dateFormat = chosenDate.slice(5).replace("-", ".");
-
-  // const zodiacSigns = await assignZodiacSignToDate(dateFormat);
-  // console.log(zodiacSigns);
-
-  console.log(dateFormat);
-  calendar.addEventListener("click", getBirthDayAndMonth);
+function getBirthDayAndMonth() {
+  const chosenDate = new Date(calendar.value);
+  const zodiacSignName = getZodiacSignName(
+    chosenDate.getDate(),
+    chosenDate.getMonth() + 1
+  );
+  console.log(zodiacSignName);
+  return zodiacSignName;
 }
-getBirthDayAndMonth();
+
+calendar.addEventListener("change", getBirthDayAndMonth);
