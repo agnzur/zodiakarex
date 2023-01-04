@@ -4,6 +4,12 @@ class zodiacSign {
     this.startDate = new Date(`2000-${startMonth}-${startDay}`);
     this.endDate = new Date(`2000-${endMonth}-${endDay}`);
   }
+  isZodiacSign(day, month) {
+    const date = new Date(`2000-${month}-${day}`);
+    if (date >= this.startDate && date <= this.endDate) {
+      return true;
+    }
+  }
 }
 
 const Aquarius = new zodiacSign("Aquarius", 01, 20, 02, 18);
@@ -20,33 +26,32 @@ const Sagittarius = new zodiacSign("Sagittarius", 11, 22, 12, 21);
 const Capricornus = new zodiacSign("Capricornus", 12, 22, 01, 19);
 
 function getZodiacSignName(day, month) {
-  const date = new Date(`2000-${month}-${day}`);
-  if (date >= Aquarius.startDate && date <= Aquarius.endDate) {
+  if (Aquarius.isZodiacSign(day, month)) {
     return Aquarius.signName;
-  } else if (date >= Pisces.startDate && date <= Pisces.endDate) {
+  } else if (Pisces.isZodiacSign(day, month)) {
     return Pisces.signName;
-  } else if (date >= Aries.startDate && date <= Aries.endDate) {
+  } else if (Aries.isZodiacSign(day, month)) {
     return Aries.signName;
-  } else if (date >= Taurus.startDate && date <= Taurus.endDate) {
+  } else if (Taurus.isZodiacSign(day, month)) {
     return Taurus.signName;
-  } else if (date >= Gemini.startDate && date <= Gemini.endDate) {
+  } else if (Gemini.isZodiacSign(day, month)) {
     return Gemini.signName;
-  } else if (date >= Cancer.startDate && date <= Cancer.endDate) {
+  } else if (Cancer.isZodiacSign(day, month)) {
     return Cancer.signName;
-  } else if (date >= Leo.startDate && date <= Leo.endDate) {
+  } else if (Leo.isZodiacSign(day, month)) {
     return Leo.signName;
-  } else if (date >= Virgo.startDate && date <= Virgo.endDate) {
+  } else if (Virgo.isZodiacSign(day, month)) {
     return Virgo.signName;
-  } else if (date >= Libra.startDate && date <= Libra.endDate) {
+  } else if (Libra.isZodiacSign(day, month)) {
     return Libra.signName;
-  } else if (date >= Scorpius.startDate && date <= Scorpius.endDate) {
+  } else if (Scorpius.isZodiacSign(day, month)) {
     return Scorpius.signName;
-  } else if (date >= Sagittarius.startDate && date <= Sagittarius.endDate) {
+  } else if (Sagittarius.isZodiacSign(day, month)) {
     return Sagittarius.signName;
-  } else if (date >= Capricornus.startDate && date <= Capricornus.endDate) {
+  } else if (Capricornus.isZodiacSign(day, month)) {
     return Capricornus.signName;
   } else {
     throw new Error("error");
   }
 }
-console.log(getZodiacSignName(01, 09));
+console.log(getZodiacSignName(28, 10));
