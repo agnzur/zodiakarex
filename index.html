@@ -7,13 +7,20 @@
     <script src="./zodiacSigns.js" defer></script>
     <script src="./index.js" defer></script>
     <script src="./dateAndTime.js" defer></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anybody:wght@600&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <header>
-    <div class="date-time-widget" id="date-widget"></div>
-    <div class="date-time-widget" id="time-widget"></div>
-
-    <div id="heading" class="web-name-area">Zodiakarex</div>
-    <div id="subheading" class="web-name-area">Your daily horoscope</div>
+    <div id="heading-container">
+      <div class="heading">Zodiakarex</div>
+      <div class="heading">Your daily horoscope</div>
+    </div>
+    <div id="date-time-container">
+      <div class="date-time-widget" id="date-widget"></div>
+      <div class="date-time-widget" id="time-widget"></div>
+    </div>
   </header>
   <body>
     <div id="horoscope-area-container">
@@ -28,6 +35,9 @@
           ><input type="button" value="Show horoscope" id="show-button" />
         </a>
       </span>
+    </div>
+    <div id="pic-holder">
+      <img src="co-star-feature-1.webp" id="pic" />
     </div>
   </body>
   <footer></footer>

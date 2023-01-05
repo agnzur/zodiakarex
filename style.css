@@ -1,11 +1,33 @@
+* {
+  font-family: "Anybody", cursive;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  color: white;
+
+  padding: 15px;
+}
+
 body {
   margin: 0;
+  background-color: #15053b;
 }
 
 .date-time-widget {
   text-align: right;
-  padding: 10px 10px 0;
+  padding: 10px 10px 10px;
   font-size: 18px;
+  font-weight: bold;
+}
+
+.heading {
+  font-size: 50px;
+  padding: 10px;
+  font-weight: bold;
+  font-style: italic;
+  text-shadow: white 1px 1px;
 }
 
 .web-name-area {
@@ -15,27 +37,17 @@ body {
   letter-spacing: 2px;
 }
 
-#heading {
-  border-top: 2px solid black;
-  font-size: 60px;
-}
-
-#subheading {
-  font-size: 40px;
-  border-bottom: 2px solid black;
+#pic {
+  width: 500px;
+  border-radius: 30%;
+  padding: 10px 20px;
 }
 
 #horoscope-area-container {
   padding: 100px 10px 200px;
 }
 
-#name-field,
-#birth-date-container,
-#button-conatiner {
-  padding: 5px 10px;
-}
-
 footer {
   height: 120px;
-  background-color: grey;
+  background-color: white;
 }
