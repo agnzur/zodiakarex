@@ -8,8 +8,16 @@ function getBirthDayAndMonth() {
     chosenDate.getDate(),
     chosenDate.getMonth() + 1
   );
-  console.log(zodiacSignName);
+
   return zodiacSignName;
 }
 
 calendar.addEventListener("change", getBirthDayAndMonth);
+
+async function showHoroscope() {
+  const horoscopeSign = getBirthDayAndMonth();
+  const horoscopeResult = await getApi(horoscopeSign);
+  console.log(horoscopeSign);
+  console.log(horoscopeResult);
+}
+calendar.addEventListener("change", showHoroscope);
