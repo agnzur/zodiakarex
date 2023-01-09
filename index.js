@@ -1,7 +1,6 @@
 const nameField = document.getElementById("name-field");
 const showButton = document.getElementById("show-button");
 const calendar = document.getElementById("birth-date-widget");
-console.log(calendar.value);
 
 function getBirthDayAndMonth() {
   const chosenDate = new Date(calendar.value);
@@ -24,18 +23,21 @@ async function showHoroscope() {
 calendar.addEventListener("change", showHoroscope);
 
 function onUserInput() {
-  if (
-    nameField.value !== null &&
-    nameField.value !== undefined &&
-    nameField.value !== "" &&
-    calendar.value !== ""
-  ) {
+  if (nameField.value !== "" && calendar.value !== "") {
     showButton.disabled = false;
   } else {
     showButton.disabled = true;
   }
 }
 nameField.addEventListener("input", onUserInput);
+calendar.addEventListener("input", onUserInput);
+
+function changeIndex2Link() {
+  const index2Link = document.getElementById("index2-link");
+  index2Link.href = `./index2.html?name=${nameField.value}&birthDate=${calendar.value}`;
+}
+nameField.addEventListener("input", changeIndex2Link);
+calendar.addEventListener("input", changeIndex2Link);
 
 // function showZodiacSign() {
 // const signHolder = document.getElementsByClassName("sign-holder")[0];
