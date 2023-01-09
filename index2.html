@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="./api.js" defer></script>
+    <script src="./zodiacSigns.js" defer></script>
+    <script src="./index.js" defer></script>
+    <script src="./dateAndTime.js" defer></script>
+    <link href="./style.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anybody:wght@600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="main">
+      <img src="./co-star-feature-1.webp" id="background-picture" />
+      <header>
+        <span id="heading-container">
+          <div class="heading">Zodiakarex</div>
+          <div class="heading">Your daily horoscope</div>
+        </span>
+        <span id="date-time-container">
+          <div class="date-time-widget" id="date-widget"></div>
+          <div class="date-time-widget" id="time-widget"></div>
+        </span>
+      </header>
+      <div id="horoscope-result-container">
+        <span id="name-sign-container">
+          <div class="result-area name-holder">Name:</div>
+          <div class="result-area sign-holder">Zodiac sign:</div>
+        </span>
+        <span id="sign-pic-container">
+          <img id="zodiac-sign-pic" src="./holder.jpg"
+        /></span>
+        <span id="horoscope-container">Horoscope...</span>
+      </div>
+      <footer></footer>
+    </div>
+  </body>
+</html>

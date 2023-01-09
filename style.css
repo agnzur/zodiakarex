@@ -19,7 +19,7 @@ body {
   overflow: hidden;
 }
 
-#picture {
+#background-picture {
   opacity: 0.6;
   z-index: -1;
   position: absolute;
@@ -30,6 +30,7 @@ body {
   padding: 10px 10px 10px;
   font-size: 18px;
   font-weight: bold;
+  text-align: right;
 }
 
 .heading {
@@ -38,12 +39,6 @@ body {
   font-weight: bold;
   font-style: italic;
   text-shadow: white 1px 1px;
-}
-
-#pic {
-  width: 500px;
-  border-radius: 30%;
-  padding: 10px 20px;
 }
 
 #horoscope-area-container {
@@ -73,4 +68,16 @@ body {
 footer {
   height: 120px;
   background-color: #15053bcf;
+}
+
+/* Second page */
+#horoscope-result-container {
+  padding: 100px 0;
+  color: white;
+  display: flex;
+  justify-content: space-around;
+}
+
+#zodiac-sign-pic {
+  width: 200px;
 }
