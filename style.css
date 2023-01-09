@@ -3,20 +3,30 @@
 }
 
 header {
-  display: flex;
-  justify-content: space-between;
   color: white;
   padding: 15px;
+  display: flex;
+  justify-content: space-between;
 }
 
 body {
   margin: 0;
-  background-image: url(co-star-feature-1.webp);
-  background-size: 1700px;
+  background-color: #15053b;
+}
+
+.main {
+  position: relative;
+  overflow: hidden;
+}
+
+#picture {
+  opacity: 0.6;
+  z-index: -1;
+  position: absolute;
+  width: 1600px;
 }
 
 .date-time-widget {
-  text-align: right;
   padding: 10px 10px 10px;
   font-size: 18px;
   font-weight: bold;
