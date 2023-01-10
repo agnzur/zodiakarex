@@ -6,7 +6,7 @@ function getZodiacSign() {
     chosenDate.getDate(),
     chosenDate.getMonth() + 1
   );
-
+  console.log(zodiacSignName);
   return zodiacSignName;
 }
 
@@ -14,7 +14,7 @@ async function showHoroscopeInfo() {
   const horoscopeSign = getZodiacSign();
   const horoscopeResult = await getApi(horoscopeSign);
   const horoscopeHolder = document.getElementById("horoscope-description");
-  horoscopeHolder.innerHTML = "Horoscope: " + horoscopeResult.description;
+  horoscopeHolder.innerHTML = horoscopeResult.description;
 
   const luckyNumHolder = document.getElementsByClassName("luckynum-holder")[1];
   console.log(horoscopeResult);
@@ -34,7 +34,7 @@ function showZodiacSign() {
   const nameHolder = document.getElementsByClassName("name-holder")[1];
   nameHolder.innerHTML = params.get("name");
 
-  const signHolder = document.getElementsByClassName("sign-holder")[0];
-  signHolder.innerHTML = "Zodiac sign: " + getZodiacSign();
+  const signHolder = document.getElementsByClassName("sign-holder")[1];
+  signHolder.innerHTML = getZodiacSign();
 }
 showZodiacSign();
