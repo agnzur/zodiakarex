@@ -13,7 +13,7 @@ function getZodiacSign() {
 async function showHoroscopeInfo() {
   const horoscopeSign = getZodiacSign();
   const horoscopeResult = await getApi(horoscopeSign);
-  const horoscopeHolder = document.getElementById("horoscope-info");
+  const horoscopeHolder = document.getElementById("horoscope-description");
   horoscopeHolder.innerHTML = "Horoscope: " + horoscopeResult.description;
 
   const luckyNumHolder = document.getElementsByClassName("luckynum-holder")[1];

@@ -71,13 +71,13 @@ footer {
 }
 
 /* Second page */
-#horoscope-result-container {
+#horoscope-info-container {
   padding: 100px;
   color: white;
   display: flex;
 }
 
-#horoscope-details-container {
+#horoscope-widgets-container {
   display: flex;
   justify-content: space-between;
   color: #15053b;
@@ -86,7 +86,7 @@ footer {
   flex-wrap: wrap;
 }
 
-#horoscope-details-container > div {
+#horoscope-widgets-container > div {
   background-color: white;
   width: 200px;
   text-align: center;
@@ -94,14 +94,14 @@ footer {
   margin-bottom: 20px;
 }
 
-#horoscope-info-container {
+#horoscope-description-container {
   display: flex;
   background-color: white;
   color: #15053b;
   flex-wrap: wrap;
 }
 
-#horoscope-info-container > div {
+#horoscope-description-container > div {
   padding: 20px;
   display: flex;
   align-items: center;
