@@ -10,17 +10,29 @@ function getZodiacSign() {
   return zodiacSignName;
 }
 
-async function showHoroscope() {
+async function showHoroscopeInfo() {
   const horoscopeSign = getZodiacSign();
   const horoscopeResult = await getApi(horoscopeSign);
-  const horoscopeHolder = document.getElementById("horoscope-container");
+  const horoscopeHolder = document.getElementById("horoscope-info");
   horoscopeHolder.innerHTML = "Horoscope: " + horoscopeResult.description;
+
+  const luckyNumHolder = document.getElementsByClassName("luckynum-holder")[1];
+  console.log(horoscopeResult);
+  luckyNumHolder.innerHTML = horoscopeResult.luckyNumber;
+
+  const colorHolder = document.getElementsByClassName("color-holder")[1];
+  colorHolder.innerHTML = horoscopeResult.color;
+
+  const compatibilityHolder = document.getElementsByClassName(
+    "compatibility-holder"
+  )[1];
+  compatibilityHolder.innerHTML = horoscopeResult.compatibility;
 }
-showHoroscope();
+showHoroscopeInfo();
 
 function showZodiacSign() {
-  const nameHolder = document.getElementsByClassName("name-holder")[0];
-  nameHolder.innerHTML = "Name: " + params.get("name");
+  const nameHolder = document.getElementsByClassName("name-holder")[1];
+  nameHolder.innerHTML = params.get("name");
 
   const signHolder = document.getElementsByClassName("sign-holder")[0];
   signHolder.innerHTML = "Zodiac sign: " + getZodiacSign();
