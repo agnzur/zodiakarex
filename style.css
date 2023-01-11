@@ -79,18 +79,19 @@ footer {
 
 #horoscope-widgets-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   color: #15053b;
   font-size: 18px;
   padding-bottom: 50px;
   flex-wrap: wrap;
+  align-items: center;
 }
 
 #horoscope-widgets-container > div {
   background-color: white;
   width: 200px;
   text-align: center;
-  padding: 20px;
+  padding: 20px 10px;
   margin-bottom: 20px;
 }
 
@@ -99,6 +100,7 @@ footer {
   background-color: white;
   color: #15053b;
   flex-wrap: wrap;
+  justify-content: space-around;
 }
 
 #horoscope-description-container > div {
@@ -111,6 +113,17 @@ footer {
   color: #845ce0ca;
   font-size: 20px;
   font-style: italic;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.info-widget {
+  margin: 0 10px;
+}
+
+.heading-holder {
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 #horoscope-description {
