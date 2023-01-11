@@ -6,7 +6,6 @@ function getZodiacSign() {
     chosenDate.getDate(),
     chosenDate.getMonth() + 1
   );
-  console.log(zodiacSignName);
   return zodiacSignName;
 }
 
@@ -38,3 +37,11 @@ function showZodiacSign() {
   signHolder.innerHTML = getZodiacSign();
 }
 showZodiacSign();
+
+function displaySignPic() {
+  const signPicture = document.getElementById("sign-pic");
+  const sign = getZodiacSign();
+  signPicture.src = `symbols/${sign}.png`;
+}
+
+displaySignPic();
