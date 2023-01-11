@@ -9,34 +9,32 @@ function getZodiacSign() {
   return zodiacSignName;
 }
 
-async function showHoroscopeInfo() {
+async function displayHoroscopeInfo() {
   const horoscopeSign = getZodiacSign();
   const horoscopeResult = await getApi(horoscopeSign);
-  const horoscopeHolder = document.getElementById("horoscope-description");
-  horoscopeHolder.innerHTML = horoscopeResult.description;
 
-  const luckyNumHolder = document.getElementsByClassName("luckynum-holder")[1];
-  console.log(horoscopeResult);
-  luckyNumHolder.innerHTML = horoscopeResult.luckyNumber;
+  const horoscopeDescription = document.getElementById("horoscope-description");
+  horoscopeDescription.innerHTML = horoscopeResult.description;
 
-  const colorHolder = document.getElementsByClassName("color-holder")[1];
-  colorHolder.innerHTML = horoscopeResult.color;
+  const luckyNumWidget = document.getElementById("luckynum-widget");
+  luckyNumWidget.innerHTML = horoscopeResult.luckyNumber;
 
-  const compatibilityHolder = document.getElementsByClassName(
-    "compatibility-holder"
-  )[1];
-  compatibilityHolder.innerHTML = horoscopeResult.compatibility;
+  const colorWidget = document.getElementById("color-widget");
+  colorWidget.innerHTML = horoscopeResult.color;
+
+  const compatibilityWidget = document.getElementById("compatibility-widget");
+  compatibilityWidget.innerHTML = horoscopeResult.compatibility;
 }
-showHoroscopeInfo();
+displayHoroscopeInfo();
 
-function showZodiacSign() {
-  const nameHolder = document.getElementsByClassName("name-holder")[1];
-  nameHolder.innerHTML = params.get("name");
+function displayZodiacSign() {
+  const nameWidget = document.getElementById("name-widget");
+  nameWidget.innerHTML = params.get("name");
 
-  const signHolder = document.getElementsByClassName("sign-holder")[1];
-  signHolder.innerHTML = getZodiacSign();
+  const signWidget = document.getElementById("sign-widget");
+  signWidget.innerHTML = getZodiacSign();
 }
-showZodiacSign();
+displayZodiacSign();
 
 function displaySignPic() {
   const signPicture = document.getElementById("sign-pic");

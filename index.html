@@ -1,41 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
     <title>Zodiakarex</title>
-    <script src="./api.js" defer></script>
-    <link href="./style.css" rel="stylesheet" />
-    <script src="./zodiacSigns.js" defer></script>
     <script src="./index.js" defer></script>
     <script src="./dateAndTime.js" defer></script>
+    <link href="./style.css" rel="stylesheet" />
     <link
       href="https://fonts.googleapis.com/css2?family=Anybody:wght@600&display=swap"
       rel="stylesheet"
     />
   </head>
-
   <body>
     <div class="main">
       <img src="./co-star-feature-1.webp" id="background-picture" />
       <header>
-        <span id="heading-container">
+        <div id="heading-container">
           <div class="heading">Zodiakarex</div>
           <div class="heading">Your daily horoscope</div>
-        </span>
-        <span id="date-time-container">
+        </div>
+        <div id="date-time-container">
           <div class="date-time-widget" id="date-widget"></div>
           <div class="date-time-widget" id="time-widget"></div>
-        </span>
+        </div>
       </header>
 
       <div id="horoscope-area-container">
         <span id="name-field-container">
           <input type="text" placeholder="Your name" id="name-field" />
         </span>
-        <span id="birth-date-container">
-          <input type="date" id="birth-date-widget" />
+        <span id="calendar-container">
+          <input type="date" id="calendar-widget" />
         </span>
-        <span id="button-conatiner">
-          <a href="./index2.html" id="index2-link"
+        <span id="button-container">
+          <a href="./index2.html" id="horoscope-page-href"
             ><input
               type="button"
               value="Show horoscope"
