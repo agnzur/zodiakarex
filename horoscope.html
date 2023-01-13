@@ -3,7 +3,7 @@
   <head>
     <script src="./api.js" defer></script>
     <script src="./zodiacSigns.js" defer></script>
-    <script src="./index2.js" defer></script>
+    <script src="./horoscope.js" defer></script>
     <script src="./dateAndTime.js" defer></script>
     <link href="./style.css" rel="stylesheet" />
     <link
@@ -12,7 +12,6 @@
     />
   </head>
   <body>
-    <!-- cały div z background-image i cały header są skopiowane z pierwszej strony, czy dałoby się zapisać do inaczej bez kopiowania? -->
     <div class="main">
       <img src="./co-star-feature-1.webp" id="background-picture" />
       <header>
@@ -30,27 +29,27 @@
           <div id="horoscope-widgets-container">
             <div class="horoscope-widget">
               <div class="widget-heading">Name:</div>
-              <div id="name-widget" class="horoscope-details"></div>
+              <div id="name-value" class="widget-value"></div>
             </div>
 
             <div class="horoscope-widget">
               <div class="widget-heading">Zodiac sign:</div>
-              <div id="sign-widget" class="horoscope-details"></div>
+              <div id="sign-value" class="widget-value"></div>
             </div>
 
             <div class="horoscope-widget">
               <div class="widget-heading">Compatibility:</div>
-              <div id="compatibility-widget" class="horoscope-details"></div>
+              <div id="compatibility-value" class="widget-value"></div>
             </div>
 
             <div class="horoscope-widget">
               <div class="widget-heading">Lucky number:</div>
-              <div id="luckynum-widget" class="horoscope-details"></div>
+              <div id="luckynum-value" class="widget-value"></div>
             </div>
 
             <div class="horoscope-widget">
               <div class="widget-heading">Color:</div>
-              <div id="color-widget" class="horoscope-details"></div>
+              <div id="color-value" class="widget-value"></div>
             </div>
           </div>
           <div id="horoscope-description-container">

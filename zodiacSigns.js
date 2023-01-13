@@ -18,12 +18,14 @@ class capricornSign extends generalZodiacSign {
     const date = new Date(`2000-${month}-${day}`);
     //December
     if (month === 12 && day >= 22) {
-      return date >= this.startDate && date >= this.endDate;
+      return true;
     }
     //January
-    else if (month === 1 && day <= 19) {
-      return date <= this.startDate && date <= this.endDate;
+    if (month === 1 && day <= 19) {
+      return true;
     }
+
+    return false;
   }
 }
 
