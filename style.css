@@ -1,3 +1,5 @@
+/* First page and mutual selectors */
+
 * {
   font-family: "Anybody", cursive;
 }
@@ -66,8 +68,9 @@ body {
 }
 
 footer {
-  padding: 60px;
+  padding: 60px 30px;
   background-color: #15053bcf;
+  color: white;
 }
 
 /* Second page */
