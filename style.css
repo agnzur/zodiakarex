@@ -1,12 +1,15 @@
+/* First page and mutual selectors */
+
 * {
   font-family: "Anybody", cursive;
 }
 
 header {
   color: white;
-  padding: 15px;
+  padding: 20px;
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 body {
@@ -46,35 +49,33 @@ body {
   text-align: center;
 }
 
-#birth-date-widget,
-#name-field,
-#show-button {
+#horoscope-area-container input {
   font-size: 18px;
   padding: 20px 50px;
   width: 150px;
-  margin: 0 50px;
+  margin: 0 50px 10px;
   text-align: center;
   border-radius: 10px;
 }
 
 #show-button {
-  width: 260px;
+  min-width: 260px;
 }
+
 #show-button:hover {
   cursor: pointer;
   box-shadow: 0px 0px 25px 2px rgba(255, 255, 255, 0.31);
 }
 
 footer {
-  height: 120px;
+  padding: 60px 30px;
   background-color: #15053bcf;
+  color: white;
 }
 
 /* Second page */
-#horoscope-info-container {
+#horoscope-result-container {
   padding: 100px;
-  color: white;
-  display: flex;
 }
 
 #horoscope-widgets-container {
@@ -95,6 +96,23 @@ footer {
   margin-bottom: 20px;
 }
 
+.widget-value {
+  color: #845ce0ca;
+  font-size: 20px;
+  font-style: italic;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.horoscope-widget {
+  margin: 0 10px;
+}
+
+.widget-heading {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 #horoscope-description-container {
   display: flex;
   background-color: white;
@@ -107,23 +125,6 @@ footer {
   padding: 20px;
   display: flex;
   align-items: center;
-}
-
-.info-holder {
-  color: #845ce0ca;
-  font-size: 20px;
-  font-style: italic;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.info-widget {
-  margin: 0 10px;
-}
-
-.heading-holder {
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
 
 #horoscope-description {

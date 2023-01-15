@@ -3,7 +3,7 @@
   <head>
     <script src="./api.js" defer></script>
     <script src="./zodiacSigns.js" defer></script>
-    <script src="./index2.js" defer></script>
+    <script src="./horoscope.js" defer></script>
     <script src="./dateAndTime.js" defer></script>
     <link href="./style.css" rel="stylesheet" />
     <link
@@ -24,46 +24,43 @@
           <div class="date-time-widget" id="time-widget"></div>
         </span>
       </header>
-      <div id="horoscope-info-container">
+      <div id="horoscope-result-container">
         <div>
           <div id="horoscope-widgets-container">
-            <div class="info-widget">
-              <div class="name-holder heading-holder">Name:</div>
-              <div class="name-holder info-holder"></div>
+            <div class="horoscope-widget">
+              <div class="widget-heading">Name:</div>
+              <div id="name-value" class="widget-value"></div>
             </div>
 
-            <div class="info-widget">
-              <div class="sign-holder heading-holder">Zodiac sign:</div>
-              <div class="sign-holder info-holder"></div>
+            <div class="horoscope-widget">
+              <div class="widget-heading">Zodiac sign:</div>
+              <div id="sign-value" class="widget-value"></div>
             </div>
 
-            <div class="info-widget">
-              <div class="compatibility-holder heading-holder">
-                Compatibility:
-              </div>
-              <div class="compatibility-holder info-holder"></div>
+            <div class="horoscope-widget">
+              <div class="widget-heading">Compatibility:</div>
+              <div id="compatibility-value" class="widget-value"></div>
             </div>
 
-            <div class="info-widget">
-              <div class="luckynum-holder heading-holder">Lucky number:</div>
-              <div class="luckynum-holder info-holder"></div>
+            <div class="horoscope-widget">
+              <div class="widget-heading">Lucky number:</div>
+              <div id="luckynum-value" class="widget-value"></div>
             </div>
 
-            <div class="info-widget">
-              <div class="color-holder heading-holder">Color:</div>
-              <div class="color-holder info-holder"></div>
+            <div class="horoscope-widget">
+              <div class="widget-heading">Color:</div>
+              <div id="color-value" class="widget-value"></div>
             </div>
           </div>
           <div id="horoscope-description-container">
             <div id="sign-pic-container">
               <img id="sign-pic" src="./holder.jpg" />
             </div>
-
             <div id="horoscope-description">Horoscope:</div>
           </div>
         </div>
       </div>
-      <footer></footer>
+      <footer><div>Made with 🤍 by Agnieszka</div></footer>
     </div>
   </body>
 </html>

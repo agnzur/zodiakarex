@@ -1,8 +1,8 @@
 const nameField = document.getElementById("name-field");
-const showButton = document.getElementById("show-button");
-const calendar = document.getElementById("birth-date-widget");
+const calendar = document.getElementById("calendar-widget");
 
 function onUserInput() {
+  const showButton = document.getElementById("show-button");
   if (nameField.value !== "" && calendar.value !== "") {
     showButton.disabled = false;
   } else {
@@ -12,9 +12,9 @@ function onUserInput() {
 nameField.addEventListener("input", onUserInput);
 calendar.addEventListener("input", onUserInput);
 
-function changeIndex2Link() {
-  const index2Link = document.getElementById("index2-link");
-  return (index2Link.href = `./index2.html?name=${nameField.value}&birthDate=${calendar.value}`);
+function changeHoroscopePageHref() {
+  const horoscopePage = document.getElementById("horoscope-page-href");
+  horoscopePage.href = `./horoscope.html?name=${nameField.value}&birthDate=${calendar.value}`;
 }
-nameField.addEventListener("input", changeIndex2Link);
-calendar.addEventListener("input", changeIndex2Link);
+nameField.addEventListener("input", changeHoroscopePageHref);
+calendar.addEventListener("input", changeHoroscopePageHref);
