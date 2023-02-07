@@ -3,7 +3,8 @@ const calendar = document.getElementById("calendar-widget");
 
 function onUserInput() {
   const showButton = document.getElementById("show-button");
-  if (nameField.value !== "" && calendar.value !== "") {
+  const regex = new RegExp(/[A-Za-z]+/);
+  if (regex.test(nameField.value) === true && calendar.value !== "") {
     showButton.disabled = false;
   } else {
     showButton.disabled = true;
